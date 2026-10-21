@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exp3</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<p>Name: Batch: B-3</p>
+<p>Roll No: Date:28/7/26</p>
+<p><strong><u>EXPERIMENT NO. 03</u></strong></p>
+<p><strong>To Simulate and Analyze Schematics Of 2-Input NAND Gate Using
+LT Spice.</strong></p>
+<p><strong>OBJECTIVE:</strong> To simulate the schematic of the CMOS
+based NAND gate</p>
+<p><strong>SOFTWARE</strong>: LT Spice</p>
+<p><strong>THEORY:</strong></p>
+<p>NAND denotes NOT –AND</p>
+<p>Table 1 shows the truth table for a NAND circuit</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 32%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>A</th>
+<th>B</th>
+<th>Y</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Table 1. The truth table for a two-input NAND
+circuit</strong></em></p>
+<p>Figure 1 shows a CMOS two-input NAND gate. P-channel transistors Q1
+and Q2 are connected in parallel between +V and the output terminal.
+N-channel transistors Q3 and Q4 are connected in series between the
+output terminal and ground.</p>
+<p><img src="img/exp3/media/image1.jpeg"
+style="width:2.18635in;height:2.31301in"
+alt="https://eepower.com/uploads/articles/basic-cmos-logic-gates-fig2.jpg" /></p>
+<p><em><strong>Figure 1: A CMOS two-input NAND gate</strong></em></p>
+<p>With Q3 and Q4 transistors” on” and Q1 and Q2 transistors “off,” the
+output is a logic 0. This condition happens when both inputs, A and B,
+are logic 1, confirming the lowest row in the above truth table. With
+logic 0 in inputs A and B, Q3 and Q4 transistors are “off,” and Q1 and
+Q2 transistors are “on,” producing a logic 1 output. This is consistent
+with the first row of the truth table. When one of the inputs is a logic
+“1” and the other one is a logic “0”, either Q3 is “off” and Q2 is “on”
+or Q4 is “off” and Q1 is “on.” The output in both cases is a logic “1,”
+validating the second and the third rows of the truth table.</p>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new</strong>
+<strong>schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p>Simulate <strong>edit command</strong>: add required voltage
+level</p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation</strong></p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+</ol>
+<blockquote>
+<p><strong>CIRCUIT</strong>:</p>
+<p><img src="img/exp3/media/image2.png"
+style="width:5.49861in;height:3.09473in" /></p>
+<p>CMOS 2-Input NAND Gate Circuit Schematic</p>
+<p><img src="img/exp3/media/image3.png"
+style="width:5.35417in;height:3.44043in" /></p>
+<p>CMOS 2-Input NOR Gate Circuit Schematic</p>
+</blockquote>
+<p><strong>OUTPUT:</strong></p>
+<p><img src="img/exp3/media/image4.png"
+style="width:6.30208in;height:2.94367in" /></p>
+<p>Simulated Output Waveform of 2-Input NAND Gate</p>
+<p><img src="img/exp3/media/image5.png"
+style="width:6.38542in;height:2.93961in" /></p>
+<p>Simulated Output Waveform of 2-Input NOR Gate</p>
+<p><strong>CONCLUSION:</strong></p>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exp2</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<p>Name: Aryan Doke Batch: B3</p>
+<p>Roll No.: 224A7066 Date:21/7/26</p>
+<p><strong><u>Experiment No. 02</u></strong></p>
+<p><strong>To simulate schematics of CMOS INVERTER using LT
+Spice.</strong></p>
+<p><strong>OBJECTIVE:</strong> To simulate the schematic of the CMOS
+inverter</p>
+<p><strong>SOFTWARE</strong>: LT Spice</p>
+<p><strong>THEORY:</strong></p>
+<blockquote>
+<p>The inverter is universally accepted as the most basic logic gate
+doing a Boolean operation on a single input variable. Fig.2.1 depicts
+thea general structure of a CMOS inverter. As shown, the simple
+structure consists of a combination of a PMOS transistor at the top and
+a NMOS transistor at the bottom.</p>
+<p><img src="img/exp2/media/image1.png"
+style="width:3.70849in;height:3.09569in" /></p>
+<p>Figure 2. 1: CMOS Inverter</p>
+<p><img src="img/exp2/media/image2.png"
+style="width:4.1875in;height:3.57882in" /></p>
+<p>Figure 2.2: Characteristics of CMOS inverter</p>
+<p>CMOS is also referred to as complementary-symmetry
+metal–oxide–semiconductor. The words "complementary-symmetry" refer to
+the fact that the typical digital design style with CMOS uses
+complementary and symmetrical pairs of p-type and n-type metal oxide
+semiconductor field effect transistors (MOSFETs) for logic functions.
+Two important characteristics of CMOS devices are high noise immunity
+and low static power consumption. Significant power is only drawn while
+the transistors in the CMOS device are switching between on and off
+states. Consequently, CMOS devices do not produce as much waste heat as
+other forms of logic, for example transistor transistor logic (TTL) or
+NMOS logic, which uses all n-channel devices without p-channel
+devices.</p>
+</blockquote>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new</strong>
+<strong>schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p><strong>Simulate edit command: add required voltage
+level</strong></p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation</strong></p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+</ol>
+<p><strong>CIRCUIT DIAGRAM:</strong></p>
+<p><img src="img/exp2/media/image3.png"
+style="width:7.10417in;height:4.36458in" /></p>
+<p><img src="img/exp2/media/image4.png"
+style="width:7.41667in;height:4.4375in" /></p>
+<p><strong>WAVEFORM OUTPUT:</strong></p>
+<p><img src="img/exp2/media/image5.png"
+style="width:7.41667in;height:3.90625in" /></p>
+<p><img src="img/exp2/media/image6.jpeg"
+style="width:7.41667in;height:3.29653in" /></p>
+<p><strong>CONCLUSION:</strong></p>
+</body>
+</html>

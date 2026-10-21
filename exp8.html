@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exp8</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<p><strong><u>Experiment No. 08</u></strong></p>
+<p>Name-Adil Arkate Roll No- 224A7064</p>
+<p>Batch- B3 Date- 15/09/2026</p>
+<p><strong>AIM: To design NOR based ROM memory</strong></p>
+<p><strong>OBJECTIVE:</strong> To design NOR based memory array</p>
+<p><strong>SOFTWARE</strong>: LT Spice</p>
+<p><strong>THEORY:</strong></p>
+<p>Read-Only Memory (ROM) Circuits: The read-only memory array can also
+be seen as a simple combinational Boolean network which produces a
+specified output value for each input combination, i.e., for each
+address. Thus, storing binary information at a particular address
+location can be achieved by the presence or absence of a data path from
+the selected row (word line) to the selected column (bit line), which is
+equivalent to the presence or absence of a device at that location.</p>
+<p><img src="img/exp8/media/image1.png"
+style="width:5.20139in;height:4.95608in" />4-bit x 4-bit NOR ROM array:
+Consider first the 4-bit x4-bit memory array shown in Fig (a), each
+column consists of a pseudo-nMOS NOR gate driven by some of the row
+signals, i.e., the word lines. Here only one word line is activated
+(selected) at a time by raising its voltage to VDD, while all other rows
+are held at a low voltage level. If an active transistor exists at the
+cross point of a column and the selected row, the column voltage is
+pulled down to the logic low level by that transistor. If no active
+transistor exists at the cross point, the column voltage is pulled high
+by the pMOS load device. Thus, a logic " 1 "-bit is stored as the
+absence of an active transistor, while the logic “-bit is stored as the
+presence of an active transistor at the crosspoint. To reduce static
+power consumption, the pMOS load transistors in the ROM array shown in
+Fig. (a) can also be driven by a periodic precharge signal, resulting in
+a dynamic ROM.</p>
+<p><img src="img/exp8/media/image2.png"
+style="width:6.74722in;height:4.56319in" /></p>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new
+schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p><strong>Simulate edit command: add required voltage
+level</strong></p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation(spice)</strong>--- click on <strong>Write Spice
+deck</strong>.</p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+<li><p>To see fall and rise time--- in <strong>Edit</strong> menu
+---click on <strong>SPICE error log</strong>.</p></li>
+</ol>
+<p><img src="img/exp8/media/image3.png"
+style="width:7.41667in;height:3.98819in" /><img
+src="img/exp8/media/image4.png"
+style="width:7.41667in;height:3.91736in" /><strong>OUTPUT:</strong></p>
+<p><strong>CONCLUSION:</strong> The 4-bit × 4-bit NOR-based ROM memory
+array was successfully designed and simulated using LTspice. The
+simulation verified that the stored data is read correctly according to
+the selected word line. A logic 1 is represented by the absence of a
+pull-down transistor, while a logic 0 is represented by its presence.
+Thus, the NOR ROM array demonstrates reliable read-only data storage and
+retrieval using a simple transistor-based memory structure.</p>
+</body>
+</html>

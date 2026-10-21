@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exp1</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<p><strong>Experiment No. 01</strong></p>
+<p><strong>To simulate schematics of NMOS and PMOS transistor using LT
+Spice .</strong></p>
+<p><strong>OBJECTIVE:</strong> To simulate the schematic of the NMOS and
+PMOS transistor</p>
+<p><strong>SOFTWARE</strong>: Electric VLSI , LT Spice</p>
+<p><strong>THEORY:</strong> The MOSFET is actually a four-terminal
+device, whose substrate, or body terminal must be always held at one of
+the extreme voltage in the circuit, either the most positive for the
+PMOS or the most negative for the NMOS. One unique property of the
+MOSFET is that the gate draws no measurable current
+(I<sub>G</sub>=0).</p>
+<p>Current flow between the source and drain terminals is controlled by
+the voltage V<sub>GS</sub> applied between the gate and source
+terminals. If the gate-to-source voltage V<sub>GS</sub> &lt;
+V<sub>T</sub> no current can flow between the source and the drain –
+i.e. the transistor is OFF; if V<sub>GS</sub> &gt; V<sub>T</sub>, then
+current can flow between the source and the drain</p>
+<p>– i.e. the transistor is ON. The circuit symbol for an n-channel
+enhancement-mode (VT &gt; 0 Volts) MOSFET is shown in Figure, along with
+the terminal current reference directions.</p>
+<p><img src="img/exp1/media/image1.png"
+style="width:3.29236in;height:1.5375in"
+alt="https://lh5.googleusercontent.com/-fdCQIVnQbPd1axQ8ciU-o2iB3B9RcU_om2AMRP2X--IS8osv2XVfyT1uL4Ko-qCkuIVs8Cl9kI3R4S5WIL7E9b12djeOmTqCKA-3WeK1TFgSYOHVPxnGtsEk0G02YVON-3dADU" /></p>
+<p>In the ON state, the current IDS flowing from the drain to the source
+will depend on the potential difference VDS between the drain and the
+source: IDS increases with increasing drain-to-source voltage
+V<sub>DS</sub> as long as the drain voltage is at least V<sub>T</sub>
+below the gate voltage, i.e as long as (V<sub>GS</sub>- V<sub>T</sub>)
+&gt; V<sub>DS</sub>. When V<sub>DS</sub> increases above
+(V<sub>GS</sub>- V<sub>T</sub>), I<sub>DS</sub> saturates at a constant
+value. V-I operating curves for a typical n-channel enhancement-mode
+Field Effect Transistor (FET). As can be seen in the figure, for each
+value of VGS there is a unique curve of I<sub>DS</sub> Vs
+V<sub>DS</sub><strong>.</strong></p>
+<p><img src="img/exp1/media/image2.jpeg"
+style="width:5.42431in;height:2.37708in"
+alt="https://lh6.googleusercontent.com/31hg3bfNVRCSy3DsgNGR6pn9f0uWlbf4ZSWb4auTcVO6BF9Vcm4zd8Z3e0oUsl_N7-vQX-4O_FE0o3k7VPbtltE1EylIyfQoyqXGsybOtK_D9jarZaKgXv9YKbe_4TVQcnfeBRg" /></p>
+<p>The PMOS transistor or P-channel metal oxide semiconductor is a kind
+of transistor where the p-type dopants are utilized in the channel or
+gate region. This transistor is exactly the reverse of the NMOS
+Transistor. These transistors have three main terminals; the source, the
+gate &amp; the drain where the transistor’s source is designed with a
+p-type substrate, and the drain terminal is designed with an n-type
+substrate. In this transistor, the charge carriers like holes are
+responsible for the conduction of current. The PMOS transistor symbols
+are shown below.</p>
+<p><img src="img/exp1/media/image3.jpeg"
+style="width:1.75in;height:1.52778in"
+alt="PMOS Transistor Symbol" /></p>
+<p><strong>PMOS Transistor Symbol</strong></p>
+<h4 id="pmos-transistor-characteristics">PMOS Transistor
+Characteristics</h4>
+<p>The PMOS transistor I-V characteristics are shown below. These
+characteristics are divided into two regions in order to obtain the
+relationship between the drain to source current (I DS) as well as its
+terminal voltages like linear &amp; saturation regions.</p>
+<p>In a liner region, the IDS will linearly increase when the VDS (drain
+to source voltage) is increased whereas in the saturation region, the I
+DS is stable &amp; it is independent of VDS. The main relationship
+between the ISD (source to drain current) &amp; its terminal voltages is
+derived by a similar procedure of the NMOS transistor. In this case, the
+only change will be the charge carriers present within the inversion
+layer are simply holes. When the holes move from source to drain then
+the flow of current is also the same.</p>
+<p><img src="img/exp1/media/image4.jpeg"
+style="width:3.54861in;height:2.34028in"
+alt="PMOS Transistor I-V Characteristics" /></p>
+<p><em><strong>PMOS Transistor I-V Characteristics</strong></em></p>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new</strong>
+<strong>schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p><strong>Simulate edit command : add required voltage
+level</strong></p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation</strong>.</p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+</ol>
+<p>OUTPUT:</p>
+<p>NMOS:</p>
+<p><img src="img/exp1/media/image5.png"
+style="width:7.21875in;height:3.56409in" /></p>
+<p>PMOS:</p>
+<p><img src="img/exp1/media/image6.png"
+style="width:5.65704in;height:3.57342in" /></p>
+<p><img src="img/exp1/media/image7.png"
+style="width:7.41667in;height:3.55486in" /></p>
+<p><strong>CONCLUSION:</strong></p>
+<p>The schematics of NMOS and PMOS transistors were successfully
+simulated using LTspice. The simulation helped in understanding the
+operating characteristics and switching behavior of both types of
+MOSFETs. The voltage and current waveforms obtained from the simulation
+verified the basic principles of NMOS and PMOS operation, including
+their dependence on gate, source, and drain voltages. The results
+demonstrate that LTspice is an effective tool for analyzing and
+designing transistor-based circuits before practical implementation.</p>
+</body>
+</html>

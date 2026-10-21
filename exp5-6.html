@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>exp5-6</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<p>Experiment No. 05</p>
+<p><strong>To implement and analyze SR Latch using static CMOS design
+style</strong></p>
+<p><strong>OBJECTIVE:</strong> To simulate the schematic of SR latch</p>
+<p><strong>SOFTWARE</strong>: LT Spice</p>
+<p><strong>THEORY:</strong></p>
+<h3 id="sr-latch-based-on-nor-gate">SR Latch based on NOR Gate</h3>
+<p><img src="img/exp5-6/media/image1.png"
+style="width:3.125in;height:2.08333in" alt="Gate Level" /></p>
+<p>If the set input (S) is equal to logic <strong>"1"</strong> and the
+reset input is equal to logic <strong>"0."</strong> then the output Q
+will be forced to logic <strong>"1"</strong>. While Q¯ is forced to
+logic <strong>"0"</strong>. This means the SR latch will be set,
+irrespective of its previous state.</p>
+<p>Similarly, if S is equal to "0" and R is equal
+to <strong>"1"</strong> then the output Q will be forced
+to <strong>"0"</strong> while Q¯¯ is forced to <strong>"1"</strong>.
+This means the latch is reset, regardless of its previously held state.
+Finally, if both of the inputs S and R are equal to
+logic <strong>"1"</strong> then both output will be forced to
+logic <strong>"0"</strong> which conflicts with the complementarily of Q
+and Q¯¯</p>
+<p>Therefore, this input combination is not allowed during normal
+operation. Truth table of NOR based SR Latch is given in table.</p>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 15%" />
+<col style="width: 16%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>S</strong></th>
+<th><strong>R</strong></th>
+<th><strong>Q</strong></th>
+<th><strong>Operation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>Q</td>
+<td>Hold</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>Set</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>Reset</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>Not allowed</td>
+</tr>
+</tbody>
+</table>
+<p>CMOS SR latch based on NOR gate is shown in the figure given
+below.</p>
+<p><img src="img/exp5-6/media/image2.png"
+style="width:4.16667in;height:2.84375in" alt="CMOS SR latch" /></p>
+<p>If the S is equal to V<sub>OH</sub> and the R is equal to
+V<sub>OL</sub>, both of the parallel-connected transistors M1 and M2
+will be ON. The voltage on node Q¯will assume a logic-low level of
+V<sub>OL</sub> = 0.</p>
+<p>At the same time, both M3 and M4 are turned off, which results in a
+logic-high voltage V<sub>OH</sub> at node Q. If the R is equal to
+V<sub>OH</sub> and the S is equal to V<sub>OL</sub>, M1 and M2 turned
+off and M3 and M4 turned on.</p>
+<h3 id="sr-latch-based-on-nand-gate">SR Latch based on NAND Gate</h3>
+<p><img src="img/exp5-6/media/image3.png"
+style="width:2.875in;height:2.38542in" alt="SR Latch" /></p>
+<p>Block diagram and gate level schematic of NAND based SR latch is
+shown in the figure. The small circles at the S and R input terminals
+represents that the circuit responds to active low input signals. The
+truth table of NAND based SR latch is given in table</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S</th>
+<th>R</th>
+<th>Q</th>
+<th>Q′</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>NC</td>
+<td>NC</td>
+<td>No change. Latch remained in present state.</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>Latch SET.</td>
+</tr>
+<tr class="odd">
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>Latch RESET.</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>Invalid condition.</td>
+</tr>
+</tbody>
+</table>
+<p>If S goes to 0 (while R = 1), Q goes high, pulling Q¯¯ low and the
+latch enters Set state</p>
+<p>S = <strong>0</strong> then Q = <strong>1</strong> (if R
+= <strong>1</strong>)</p>
+<p>If R goes to 0 (while S = 1), Q goes high, pulling Q¯low and the
+latch is Reset</p>
+<p>R = <strong>0</strong> then Q = <strong>1</strong> (if S
+= <strong>1</strong>)</p>
+<p>Hold state requires both S and R to be high. If S = R = 0 then output
+is not allowed, as it would result in an indeterminate state. CMOS SR
+Latch based on NAND Gate is shown in figure.</p>
+<p><img src="img/exp5-6/media/image4.png"
+style="width:4.16667in;height:3.32292in" alt="CMOS on NAND gate" /></p>
+<p>The CMOS circuit implementation has low static power dissipation and
+high noise margin.</p>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new
+schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p><strong>Simulate edit command : add required voltage
+level</strong></p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation(spice)</strong>--- click on <strong>Write Spice
+deck</strong>.</p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+</ol>
+<p><img src="img/exp5-6/a41f6d5f3e47a947d39879e9b2a69163dbad5ac7.png"
+style="width:7.41667in;height:3.22917in" /></p>
+<p><img src="img/exp5-6/662f8aabd8f9be3754bc6368dc30fb439408acaf.png"
+style="width:7.41667in;height:3.53125in" /></p>
+<p><strong>CONCLUSION:</strong></p>
+<p>The SR Latch was successfully implemented using static CMOS design.
+Its <strong>Set, Reset, Hold, and Invalid states</strong> were verified,
+demonstrating correct bistable operation and reliable data storage.</p>
+<p>Experiment No. 06</p>
+<p><strong>To implement and analyze multiplexer using CMOS transmission
+gate</strong></p>
+<p><strong>OBJECTIVE:</strong> To simulate the schematic of
+Multiplexer</p>
+<p><strong>SOFTWARE</strong>: LT Spice</p>
+<p><strong>THEORY:</strong></p>
+<blockquote>
+<p>A 4:1 multiplexer (MUX) is the MUX which has 4 input lines
+(I<sub>0</sub>, I<sub>1</sub>, I<sub>2</sub>, and I<sub>3</sub>), 2
+select line (S<sub>0</sub> and S<sub>1</sub>), and 1 output line (Y).
+The logic levels applied to the select lines S<sub>0</sub> and
+S<sub>1</sub> determine which data input will transmit to the output
+line.</p>
+<p>For determining the Boolean expression for output (Y) of the 4:1
+multiplexer and its logic circuitry, we require its function table
+(truth table) that provides information about the operation of its
+circuit. The function table of the 4:1 multiplexer with data inputs
+I<sub>0</sub>, I<sub>1</sub>, I<sub>2</sub>, and I<sub>3</sub> is given
+below.</p>
+</blockquote>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 27%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2"><strong>Select Lines</strong></th>
+<th rowspan="2"><strong>Output(Y)</strong></th>
+</tr>
+<tr class="odd">
+<th><strong>S<sub>1</sub></strong></th>
+<th><strong>S<sub>0</sub></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>0</td>
+<td>I<sub>0</sub></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>0</td>
+<td>I<sub>1</sub></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>I<sub>2</sub></td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>1</td>
+<td>I<sub>3</sub></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Using this truth table, we can write the logic expression for the
+output of 4:1 MUX as,</p>
+</blockquote>
+<p>Y=S1¯S0¯I0+S1¯S0I1+S1S0¯I2+S1S0I3 implement this logic expression, we
+require four AND gates, two NOT gates, and one OR gate. Thus, the logic
+circuit of the 4:1 MUX is shown in Figure-3.</p>
+<blockquote>
+<p><img src="img/exp5-6/media/image5.jpeg"
+style="width:4.66667in;height:2.66667in"
+alt="https://www.tutorialspoint.com/assets/questions/media/334420-1681894063.jpg" /></p>
+</blockquote>
+<h3 id="operation">Operation</h3>
+<blockquote>
+<p>This logic circuit of the 4:1 MUX shown in Figure-3 will work as
+follows −</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>When S<sub>1</sub> = 0 and S<sub>0</sub> = 0, the AND gate A is
+enabled, and the AND gates B, C, and D are disabled. So, the output Y =
+I<sub>0</sub>.</p>
+</blockquote></li>
+<li><blockquote>
+<p>When S<sub>1</sub> = 0 and S<sub>0</sub> = 1, the AND gate B is
+enabled, and the AND gates A, C, and D are disabled. So, the output Y =
+I<sub>1</sub>.</p>
+</blockquote></li>
+<li><blockquote>
+<p>When S<sub>1</sub> = 1 and S<sub>0</sub> = 0, the AND gate C is
+enabled, and the AND gates A, B, and D are disabled. So, the output Y =
+I<sub>2</sub>.</p>
+</blockquote></li>
+<li><blockquote>
+<p>When S<sub>1</sub> = 1 and S<sub>0</sub> = 1, the AND gate D is
+enabled, and the AND gates A, B, and C are disabled. So, the output Y =
+I<sub>3</sub>.</p>
+</blockquote></li>
+</ul>
+<h2 id="applications-of-multiplexers"><u>Applications of
+Multiplexers</u></h2>
+<blockquote>
+<p>The multiplexer is one of the widely combinational logic circuits in
+digital systems. Some important applications of the multiplexers are
+listed below.</p>
+</blockquote>
+<ul>
+<li><blockquote>
+<p>Multiplexer is used as data selector device.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Multiplexers are used in communication systems to increase the
+efficiency of the system.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Multiplexers are used in telephone networks for integration of
+several audio signals on a single transmission line.</p>
+</blockquote></li>
+<li><blockquote>
+<p>To maintain large amount of data, multiplexers are also used in
+computer memory systems.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Multiplexers are also employed in TV broadcasting systems.</p>
+</blockquote></li>
+<li><blockquote>
+<p>Multiplexers are used in satellite communication and GPS (Global
+Positioning System).</p>
+</blockquote></li>
+<li><blockquote>
+<p>Multiplexers are also used in PLC (Programmable Logic Control)
+systems, etc.</p>
+</blockquote></li>
+</ul>
+<p><strong>PROCEDURE:</strong></p>
+<ol type="1">
+<li><p>Open LT Spice</p></li>
+<li><p>In <strong>Files</strong> Menu---click on <strong>new
+schematics</strong></p></li>
+<li><p>Go to <strong>Components</strong>---Select each required
+component----do connections.</p></li>
+<li><p><strong>Simulate edit command : add required voltage
+level</strong></p></li>
+<li><p>Simulate the schematic --- in <strong>Tools</strong> menu ----go
+to <strong>Simulation(spice)</strong>--- click on <strong>Write Spice
+deck</strong>.</p></li>
+<li><p>LT Spice window gets opened. There Right click on the black
+window---click on <strong>add trace</strong>.</p></li>
+</ol>
+<p><img src="img/exp5-6/c803e40552dba692bac387e93754f9a3465e9e6a.png"
+style="width:7.41667in;height:4.04167in" /></p>
+<p><strong>OUTPUT:</strong></p>
+<p><img src="img/exp5-6/20025301ccd574e16c077d495b663633d3f3ab4a.png"
+style="width:7.41667in;height:3.90625in" /></p>
+<p><strong>CONCLUSION:</strong></p>
+<p>The Multiplexer was successfully implemented using a <strong>CMOS
+transmission gate</strong>. Its selection and data transfer operations
+were verified, demonstrating correct switching behavior and efficient
+signal transmission.</p>
+</body>
+</html>
